@@ -1,0 +1,8 @@
+{
+    "baseUrl": "https://www.seleniumeasy.com/test/",
+    "viewportHeight": 900,
+    "viewportWidth": 1400,
+    "defaultCommandTimeout": 20000,
+    "testFile": "**/*.{feature, features}"
+}
+
