@@ -6,6 +6,8 @@ it ('Automate_Banner & Simple Form Demo', ()=>{
 
  cy.visit('/');
  cy.fixture("Navigate").then((nav)=>{ 
+  test.pageWait(nav.asertbanner);
+  cy.wait(3000);
   test.clickElement(nav.banner);
   test.scrollToElement(nav.sideNav);
   test.clickElement(nav.inputForms);
@@ -25,6 +27,8 @@ it ('Automate_Checkbox Demo', ()=>{
 
   cy.visit('/');
   cy.fixture("Navigate").then((nav)=>{ 
+   test.pageWait(nav.asertbanner);
+   cy.wait(3000);
    test.clickElement(nav.banner);
    test.scrollToElement(nav.sideNav);
    test.clickElement(nav.inputForms);
@@ -45,6 +49,8 @@ it ('Automate_Checkbox Demo', ()=>{
 
   cy.visit('/');
   cy.fixture("Navigate").then((nav)=>{ 
+   test.pageWait(nav.asertbanner);
+   cy.wait(3000);
    test.clickElement(nav.banner);
    test.scrollToElement(nav.sideNav);
    test.clickElement(nav.inputForms);
