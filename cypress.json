@@ -3,5 +3,5 @@
     "viewportHeight": 900,
     "viewportWidth": 1400,
     "defaultCommandTimeout": 20000,
-    "testFile": "**/*.{feature, features}"
+    "testFiles": "**/*.{feature, features}"
 }

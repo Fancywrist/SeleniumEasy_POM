@@ -8,18 +8,17 @@ const test= new TestActions();
 //     cy.visit('/');
 // });
 
-Given("I am on Test site", ()=>{
+Given("I am on the Test site", ()=>{
 
     cy.visit('/');
 });
-When('I click on {string} ', function (string){
+When('I click on {string}', function (string){
     cy.fixture("Navigate").then((nav)=>{ 
     switch (string) {
         case "Banner prompt":
             test.pageWait(nav.asertbanner);
             test.clickElement(nav.banner);
             break;
-
         case "Input Form":
             test.clickElement(nav.inputForms);
             break;
@@ -36,7 +35,7 @@ And(/^I navigate to the Menu List$/, function (){
         test.scrollToElement(nav.sideNav);
 
         
-    })
+    });
 });
  
 
@@ -51,18 +50,19 @@ When('I click om Simple From Demo  {string}', function (string){
         case "Simple From Demo":
             test.clickElement(nav.simpleFormD);
     }
-});
+    });
+});   
 And(/^I enter "value" for  "([^"]*)"$/, function (value){
     cy.fixture("Navigate").then((nav)=>{ 
         switch (value) {
-           case  "A":
-            test.typeAValue(nav.sumOne,nav.valueA);
-            break;
-            switch (string) {
-             case  "B":
-           test.typeAValue(nav.sumOne,nav.valueB);
-           break;
-    });
+            case  "A":
+                test.typeAValue(nav.sumOne,nav.valueA);
+                break;
+            case  "B":
+                test.typeAValue(nav.sumOne,nav.valueB);
+                
+    };
+});
 });
 And (/^I click on "([^"]*)" button$/, function (button){
     cy.fixture("Navigate").then((nav)=>{ 
@@ -70,11 +70,13 @@ And (/^I click on "([^"]*)" button$/, function (button){
         case "Get Total":
             test.clickElement(nav.sumTotal);
 
-    })
+    }
+});
+});   
 Then (/^I should see a success message$/, function (){
     cy.fixture("Navigate").then((nav)=>{ 
      test.viewElementText(nav.sumDisplay,nav.total);    
 
+    });
 });
-})
-})
+

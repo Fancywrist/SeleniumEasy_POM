@@ -9,7 +9,7 @@ Feature: Input Form Test
    Scenario: A user should be able to Fill Simple Form Demo successfully
      
      When I click on "Banner prompt" 
-     And I navigate to Menu List
+     And I navigate to the Menu List
      And I click on "Input Form" 
      Then I should see a list of Demo
      When I click om "Simple From Demo" 
