@@ -7,6 +7,7 @@ const test= new TestActions();
 
 //     cy.visit('/');
 // });
+
 Given("I am on Test site", ()=>{
 
     cy.visit('/');
